@@ -258,3 +258,16 @@ the main branch. The workflow file should be named as
 [![NuGet version badge](https://img.shields.io/nuget/v/{your_package_name})](https://www.nuget.org/packages/{your_package_name})
 [![NuGet download count badge](https://img.shields.io/nuget/dt/{your_package_name})](https://www.nuget.org/packages/{your_package_name})
 ```
+Components shipped from this repo SHOULD comply with the following requirements:
+
+* SHOULD support all the officially supported versions of
+  [.NET](https://dotnet.microsoft.com/download/dotnet) and [.NET
+  Framework](https://dotnet.microsoft.com/download/dotnet-framework) (an older
+  Windows-based .NET implementation), except `.NET Framework 3.5`.
+* SHOULD not support out-of-support .NET runtimes (eg: `.NET 452`, `.NET Core
+  2.1` etc). CI checks in this repository will not be run against out of support
+  versions.
+* Whenever a .NET version reaches end of support, components SHOULD drop support
+  for it as well. Note: This change does not require major version bump. For
+  reference see
+  [this](https://github.com/open-telemetry/opentelemetry-dotnet/pull/3351).
