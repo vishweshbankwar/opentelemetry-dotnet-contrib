@@ -20,11 +20,11 @@ public static class GenevaLoggingExtensions
         var exporter = new GenevaLogExporter(genevaOptions);
         if (exporter.IsUsingUnixDomainSocket)
         {
-            return options.AddProcessor(new BatchLogRecordExportProcessor(exporter));
+            return options.AddProcessor(sp => new BatchLogRecordExportProcessor(exporter));
         }
         else
         {
-            return options.AddProcessor(new ReentrantExportProcessor<LogRecord>(exporter));
+            return options.AddProcessor(sp => new ReentrantExportProcessor<LogRecord>(exporter));
         }
     }
 }
