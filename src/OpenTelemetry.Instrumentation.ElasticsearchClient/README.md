@@ -2,7 +2,7 @@
 
 | Status        |           |
 | ------------- |-----------|
-| Stability     |  [Beta](..\..\Readme.md#beta)|
+| Stability     |  [Beta](../../README.md.md#beta)|
 | Code Owners   |  [@ejsmith](https://github.com/ejsmith)|
 
 ## NEST/Elasticsearch.Net
